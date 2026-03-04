@@ -8,13 +8,17 @@ using PridePerception.util;
 using TMPro;
 using UnityEngine;
 
-namespace PridePerception.compat {
-    public static class LevelStudioSupport {
-        public static void Register() {
+namespace PridePerception.compat
+{
+    public static class LevelStudioSupport
+    {
+        public static void Register()
+        {
             NPC bezzPrefab = Plugin.assets.Get<NPC>("npcs/Bezz");
             EditorInterface.AddNPCVisual("Bezz", bezzPrefab);
 
-            if (LevelLoaderPlugin.Instance != null && !LevelLoaderPlugin.Instance.npcAliases.ContainsKey("Bezz")) {
+            if (LevelLoaderPlugin.Instance != null && !LevelLoaderPlugin.Instance.npcAliases.ContainsKey("Bezz"))
+            {
                 LevelLoaderPlugin.Instance.npcAliases.Add("Bezz", bezzPrefab);
             }
 
@@ -45,7 +49,8 @@ namespace PridePerception.compat {
                 }
             };
 
-            if (LevelLoaderPlugin.Instance != null && !LevelLoaderPlugin.Instance.posterAliases.ContainsKey("bezz_rule")) {
+            if (LevelLoaderPlugin.Instance != null && !LevelLoaderPlugin.Instance.posterAliases.ContainsKey("bezz_rule"))
+            {
                 LevelLoaderPlugin.Instance.posterAliases.Add("bezz_rule", BezzPoster);
             }
 
@@ -54,20 +59,23 @@ namespace PridePerception.compat {
                 Sprite icon = AssetLoader.SpriteFromTexture2D(iconTex, 100f);
                 EditorInterfaceModes.AddToolToCategory(mode, "npcs", new BezzTool(icon));
 
-                if (mode.availableTools.ContainsKey("posters")) {
+                if (mode.availableTools.ContainsKey("posters"))
+                {
                     EditorInterfaceModes.AddToolToCategory(mode, "posters", new BezzPosterTool());
                 }
             });
         }
     }
 
-    public class BezzTool : NPCTool {
+    public class BezzTool : NPCTool
+    {
         public BezzTool(Sprite sprite) : base("Bezz", sprite) { }
         public override string titleKey => "Ed_Tool_Npc_Bezz";
         public override string descKey => "Ed_Tool_Npc_Bezz_Desc";
     }
 
-    public class BezzPosterTool : PosterTool {
+    public class BezzPosterTool : PosterTool
+    {
         public BezzPosterTool() : base("bezz_rule") { }
         public override string titleKey => "Bezz's Office Poster";
         public override string descKey => titleKey;

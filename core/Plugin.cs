@@ -10,14 +10,17 @@ using PridePerception.npcs;
 using PridePerception.util;
 using UnityEngine;
 
-namespace PridePerception.core {
+namespace PridePerception.core
+{
     [BepInDependency("mtm101.rulerp.bbplus.baldidevapi")]
     [BepInDependency("mtm101.rulerp.baldiplus.levelstudio", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInPlugin("blitzo.baldiplus.prideperception", "Pride Perception Pack", "1.3.0.0")]
-    public class Plugin : BaseUnityPlugin {
+    public class Plugin : BaseUnityPlugin
+    {
         public static Plugin current;
         public static AssetManager assets;
-        public void Awake() {
+        public void Awake()
+        {
             current = this;
             Harmony harmony = new("blitzo.baldiplus.prideperception");
             harmony.PatchAllConditionals();
@@ -26,58 +29,61 @@ namespace PridePerception.core {
             GeneratorManagement.Register(this, GenerationModType.Addend, sceneGenerated);
         }
 
-        public void runCallbacks() {
+        public void runCallbacks()
+        {
             registerAssets();
             updateAssets();
             registerNPCs();
             registerCompatibilities();
         }
 
-        public void registerAssets() {
+        public void registerAssets()
+        {
             assets.Add<Sprite>("Images/compat/LevelStudioCompat/npc_bezz",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("compat/LevelStudioCompat/npc_bezz.png")),
                     10.0f));
 
-            assets.Add<Sprite>("Images/npcs/Bezz/bezzIdle", 
+            assets.Add<Sprite>("Images/npcs/Bezz/bezzIdle",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzIdle.png")), 30.0f));
 
             for (int i = 0; i < 12.0f; i++)
-                assets.Add<Sprite>("Images/npcs/Bezz/bezzWalk" + i, 
+                assets.Add<Sprite>("Images/npcs/Bezz/bezzWalk" + i,
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzWalk" + i + ".png")), 30.0f));
 
             for (int i = 0; i < 2.0f; i++)
-                assets.Add<Sprite>("Images/npcs/Bezz/bezzHappyTalk" + i, 
+                assets.Add<Sprite>("Images/npcs/Bezz/bezzHappyTalk" + i,
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzHappyTalk" + i + ".png")), 30.0f));
 
             for (int i = 0; i < 2.0f; i++)
-                assets.Add<Sprite>("Images/npcs/Bezz/bezzUpsetTalk" + i, 
+                assets.Add<Sprite>("Images/npcs/Bezz/bezzUpsetTalk" + i,
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzUpsetTalk" + i + ".png")), 30.0f));
 
-            for (int i = 0; i < 5.0f; i++) {
-                assets.Add<Sprite>("Images/npcs/Bezz/Flag/" + i + "0", 
+            for (int i = 0; i < 5.0f; i++)
+            {
+                assets.Add<Sprite>("Images/npcs/Bezz/Flag/" + i + "0",
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/" + i + "0.png")), 30.0f));
 
-                assets.Add<Sprite>("Images/npcs/Bezz/Flag/" + i + "1", 
+                assets.Add<Sprite>("Images/npcs/Bezz/Flag/" + i + "1",
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/" + i + "1.png")), 30.0f));
 
-                assets.Add<Sprite>("Images/npcs/Bezz/Flag/3dflag" + i, 
+                assets.Add<Sprite>("Images/npcs/Bezz/Flag/3dflag" + i,
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/3dflag" + i + ".png")), 10.0f));
             }
 
-            assets.Add<Sprite>("Images/npcs/Bezz/Flag/mapMarker", 
+            assets.Add<Sprite>("Images/npcs/Bezz/Flag/mapMarker",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/mapMarker.png")), 15.0f));
-            assets.Add<Sprite>("Images/npcs/Bezz/Flag/mapIcon", 
+            assets.Add<Sprite>("Images/npcs/Bezz/Flag/mapIcon",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/mapIcon.png")), 16.0f));
-            assets.Add<Sprite>("Images/patches/Minigame_CampfirePatches/3dflagpride", 
+            assets.Add<Sprite>("Images/patches/Minigame_CampfirePatches/3dflagpride",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("patches/Minigame_CampfirePatches/3dflagpride.png")), 10.0f));
-            
-            assets.Add<Texture2D>("Images/patches/Minigame_CampfirePatches/CampfireFrenzy_TutPic_04Replacement", 
+
+            assets.Add<Texture2D>("Images/patches/Minigame_CampfirePatches/CampfireFrenzy_TutPic_04Replacement",
                 AssetLoader.TextureFromFile(ModPaths.GetPath("patches/Minigame_CampfirePatches/CampfireFrenzy_TutPic_04Replacement.png")));
-            
-            assets.Add<Sprite>("Images/patches/Minigame_PicnicPatches/brownie", 
+
+            assets.Add<Sprite>("Images/patches/Minigame_PicnicPatches/brownie",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("patches/Minigame_PicnicPatches/brownie.png")), 50.0f));
-            
-            assets.Add<Texture2D>("Images/PosterObject/poster0", 
+
+            assets.Add<Texture2D>("Images/PosterObject/poster0",
                 AssetLoader.TextureFromFile(ModPaths.GetPath("PosterObject/poster0.png")));
 
             AssetLoader.LocalizationFromMod(this);
@@ -97,11 +103,13 @@ namespace PridePerception.core {
             assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss2", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityLoss2.wav"), "bezzActivityLoss2", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
         }
 
-        public void updateAssets() {
+        public void updateAssets()
+        {
             AssetLoader.ReplaceTexture("CampfireFrenzy_TutPic_04", AssetLoader.AttemptConvertTo(assets.Get<Texture2D>("Images/patches/Minigame_CampfirePatches/CampfireFrenzy_TutPic_04Replacement"), TextureFormat.RGB24));
         }
 
-        public void registerNPCs() {
+        public void registerNPCs()
+        {
             NPCBuilder<Bezz> bezzBuilder = new(Info);
             bezzBuilder.SetName("Bezz");
             bezzBuilder.SetEnum("npcs/Bezz");
@@ -115,12 +123,14 @@ namespace PridePerception.core {
             assets.Add<NPC>("npcs/Bezz", bezz);
         }
 
-        public void registerCompatibilities() {
+        public void registerCompatibilities()
+        {
             if (Chainloader.PluginInfos.ContainsKey("mtm101.rulerp.baldiplus.levelstudio"))
                 LevelStudioSupport.Register();
         }
 
-        public void sceneGenerated(string sceneTitle, int sceneIndex, SceneObject sceneObject) {
+        public void sceneGenerated(string sceneTitle, int sceneIndex, SceneObject sceneObject)
+        {
             sceneObject.MarkAsNeverUnload();
             CustomLevelObject[] levelObjects = sceneObject.GetCustomLevelObjects();
             for (int i = 0; i < levelObjects.Length; i++)

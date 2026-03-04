@@ -1,0 +1,267 @@
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\PridePerception.deps.json
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\PridePerception.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\PridePerception.pdb
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\0Harmony.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\AlmostEngine.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\AlmostEngine.Shared.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Assembly-CSharp.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.Harmony.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.Preloader.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\com.rlabrecque.steamworks.net.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\com.unity.multiplayer-hlapi.Runtime.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\HarmonyXInterop.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Cecil.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Cecil.Mdb.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Cecil.Pdb.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Cecil.Rocks.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Security.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\MonoMod.RuntimeDetour.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\MonoMod.Utils.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\MTM101BaldAPI.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\NavMeshComponents.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusLevelStudio.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusStudioLevelFormat.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusStudioLevelLoader.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Rewired_Core.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Rewired_Windows.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\System.Configuration.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\System.Diagnostics.StackTrace.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\System.EnterpriseServices.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\System.Globalization.Extensions.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\System.ServiceModel.Internals.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\System.Xml.XPath.XDocument.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UModelerCommon.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.Analytics.DataPrivacy.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.Mathematics.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.ProGrids.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.Core.Runtime.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.Core.ShaderLibrary.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.Universal.Runtime.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.Universal.Shaders.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.TextMeshPro.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.Timeline.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AccessibilityModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AIModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AndroidJNIModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AnimationModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ARModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AssetBundleModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AudioModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ClothModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ClusterInputModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ClusterRendererModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.CoreModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.CrashReportingModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.DirectorModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.DSPGraphModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.GameCenterModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.GIModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.GridModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.HotReloadModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ImageConversionModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.IMGUIModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.InputLegacyModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.InputModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.JSONSerializeModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.LocalizationModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ParticleSystemModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.PerformanceReportingModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.Physics2DModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.PhysicsModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ProfilerModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ScreenCaptureModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SharedInternalsModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SpatialTracking.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SpriteMaskModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SpriteShapeModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.StreamingModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SubstanceModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SubsystemsModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TerrainModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TerrainPhysicsModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TextCoreModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TextRenderingModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TilemapModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TLSModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UI.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UIElementsModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UIElementsNativeModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UIModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UmbraModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UNETModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityAnalyticsCommonModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityAnalyticsModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityConnectModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityCurlModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityTestProtocolModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestAssetBundleModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestAudioModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestTextureModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestWWWModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VehiclesModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VFXModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VideoModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VirtualTexturingModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VRModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.WindModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.XR.LegacyInputHelpers.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.XRModule.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\Newtonsoft.Json.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\MoonSharp.Interpreter.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\0Harmony.xml
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.xml
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.Harmony.xml
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.Preloader.xml
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\MonoMod.RuntimeDetour.xml
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\MonoMod.Utils.xml
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusLevelStudio.xml
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusStudioLevelLoader.xml
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.csproj.AssemblyReference.cache
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.AssemblyInfoInputs.cache
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.AssemblyInfo.cs
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.csproj.CoreCompileInputs.cache
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePer.2E6326F5.Up2Date
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.dll
+C:\Users\SystemX\Desktop\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PridePerception.deps.json
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PridePerception.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PridePerception.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\0Harmony.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\AlmostEngine.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\AlmostEngine.Shared.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Assembly-CSharp.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.Harmony.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.Preloader.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\com.rlabrecque.steamworks.net.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\com.unity.multiplayer-hlapi.Runtime.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\HarmonyXInterop.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Cecil.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Cecil.Mdb.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Cecil.Pdb.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Cecil.Rocks.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Mono.Security.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\MonoMod.RuntimeDetour.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\MonoMod.Utils.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\MTM101BaldAPI.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\NavMeshComponents.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Newtonsoft.Json.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusLevelStudio.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusStudioLevelFormat.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusStudioLevelLoader.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Rewired_Core.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Rewired_Windows.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\System.Configuration.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\System.Diagnostics.StackTrace.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\System.EnterpriseServices.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\System.Globalization.Extensions.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\System.ServiceModel.Internals.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\System.Xml.XPath.XDocument.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UModelerCommon.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.Analytics.DataPrivacy.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.Mathematics.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.ProGrids.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.Core.Runtime.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.Core.ShaderLibrary.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.Universal.Runtime.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.RenderPipelines.Universal.Shaders.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.TextMeshPro.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\Unity.Timeline.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AccessibilityModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AIModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AndroidJNIModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AnimationModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ARModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AssetBundleModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.AudioModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ClothModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ClusterInputModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ClusterRendererModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.CoreModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.CrashReportingModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.DirectorModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.DSPGraphModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.GameCenterModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.GIModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.GridModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.HotReloadModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ImageConversionModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.IMGUIModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.InputLegacyModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.InputModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.JSONSerializeModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.LocalizationModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ParticleSystemModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.PerformanceReportingModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.Physics2DModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.PhysicsModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ProfilerModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.ScreenCaptureModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SharedInternalsModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SpatialTracking.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SpriteMaskModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SpriteShapeModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.StreamingModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SubstanceModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.SubsystemsModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TerrainModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TerrainPhysicsModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TextCoreModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TextRenderingModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TilemapModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.TLSModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UI.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UIElementsModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UIElementsNativeModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UIModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UmbraModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UNETModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityAnalyticsCommonModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityAnalyticsModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityConnectModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityCurlModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityTestProtocolModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestAssetBundleModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestAudioModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestTextureModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.UnityWebRequestWWWModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VehiclesModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VFXModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VideoModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VirtualTexturingModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.VRModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.WindModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.XR.LegacyInputHelpers.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\UnityEngine.XRModule.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\MoonSharp.Interpreter.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\0Harmony.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.Harmony.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\BepInEx.Preloader.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\MonoMod.RuntimeDetour.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\MonoMod.Utils.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\MTM101BaldAPI.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusLevelStudio.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusStudioLevelLoader.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePer.2E6326F5.Up2Date
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.dll
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\bin\Release\netstandard2.1\PlusStudioLevelFormat.xml
+C:\Program Files (x86)\Steam\steamapps\common\Baldi's Basics Plus\PridePerceptionPack-main\obj\Release\netstandard2.1\PridePerception.sourcelink.json
