@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MidiPlayerTK;
 using MTM101BaldAPI;
 using MTM101BaldAPI.Reflection;
@@ -12,8 +12,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace PridePerception.npcs {
-    public class Bezz : NPC {
+namespace PridePerception.npcs
+{
+    public class Bezz : NPC
+    {
         public AudioManager audio;
         public CustomSpriteRendererAnimator animator;
         public float timeBeforeTargeting;
@@ -22,7 +24,8 @@ namespace PridePerception.npcs {
         public IEnumerator collectionPending;
         public HudGauge timerGauge;
 
-        public override void Initialize() {
+        public override void Initialize()
+        {
             base.Initialize();
             audio = GetComponent<AudioManager>();
             LoadFrames();
@@ -32,7 +35,8 @@ namespace PridePerception.npcs {
             collectionPending = WaitForCollection();
         }
 
-        public override void Despawn() {
+        public override void Despawn()
+        {
             base.Despawn();
             MusicManager musicManager = Singleton<MusicManager>.Instance;
             MidiFilePlayer midiFilePlayer = (MidiFilePlayer)ReflectionHelpers.ReflectionGetVariable(musicManager, "midiPlayer");
@@ -43,8 +47,10 @@ namespace PridePerception.npcs {
             StopCoroutine(collectionPending);
         }
 
-        public void OnDestroy() {
-            if (flagType != -1.0f) {
+        public void OnDestroy()
+        {
+            if (flagType != -1.0f)
+            {
                 CoreGameManager coregm = Singleton<CoreGameManager>.Instance;
                 if (coregm.GetHud(0) != null)
                     coregm.AddPoints(-100, 0, true);
@@ -52,7 +58,8 @@ namespace PridePerception.npcs {
             }
         }
 
-        public void LoadFrames() {
+        public void LoadFrames()
+        {
             animator = gameObject.AddComponent<CustomSpriteRendererAnimator>();
             animator.renderer = spriteRenderer[0];
 
@@ -78,7 +85,8 @@ namespace PridePerception.npcs {
             animator.SetDefaultAnimation("idle", 1.0f);
         }
 
-        public IEnumerator WaitForCollection() {
+        public IEnumerator WaitForCollection()
+        {
             MusicManager musicManager = Singleton<MusicManager>.Instance;
             MidiFilePlayer midiFilePlayer = (MidiFilePlayer)ReflectionHelpers.ReflectionGetVariable(musicManager, "midiPlayer");
             float totalTime = Mathf.Ceil(midiFilePlayer.MPTK_DurationMS * 0.001f);
@@ -87,7 +95,8 @@ namespace PridePerception.npcs {
             CoreGameManager coregm = Singleton<CoreGameManager>.Instance;
             timerGauge = coregm.GetHud(0).gaugeManager.ActivateNewGauge(Plugin.assets.Get<Sprite>("Images/npcs/Bezz/Flag/3dflag" + flagType), totalTime);
 
-            while (timeLeft > 0.0f) {
+            while (timeLeft > 0.0f)
+            {
                 timeLeft -= Time.deltaTime * TimeScale;
                 timerGauge.SetValue(totalTime, timeLeft);
                 yield return null;
@@ -97,7 +106,8 @@ namespace PridePerception.npcs {
             timeBeforeTargeting = 120.0f;
             flagType = -1;
 
-            for (int i = 0; i < flags.Count; i++) {
+            for (int i = 0; i < flags.Count; i++)
+            {
                 Flag flag = flags[i];
                 MapMarkerUtil.Dispose(ec.map, flag.mapMarker);
                 flag.tweenOut();
@@ -105,26 +115,30 @@ namespace PridePerception.npcs {
             timerGauge.Deactivate();
         }
 
-        public Flag LoadFlag(Cell cell, int _flagType) {
+        public Flag LoadFlag(Cell cell, int _flagType)
+        {
             GameObject gameObject = new();
             Flag flag = gameObject.AddComponent<Flag>().Initialize(this, cell, _flagType);
             flags.Add(flag);
             return flag;
         }
 
-        public void DisposeFlag(Flag flag) {
+        public void DisposeFlag(Flag flag)
+        {
             flags.Remove(flag);
             UnityEngine.Object.Destroy(flag);
             MapMarkerUtil.Dispose(ec.map, flag.mapMarker);
             UnityEngine.Object.Destroy(flag.renderer);
         }
 
-        public void DisposeFlags() {
+        public void DisposeFlags()
+        {
             for (int i = flags.Count - 1; i >= 0.0f; i--)
                 DisposeFlag(flags[i]);
         }
 
-        public void CheckFlag(Flag flag) {
+        public void CheckFlag(Flag flag)
+        {
             if (flagType == flag.flagType)
                 WinSequence();
             else
@@ -133,7 +147,8 @@ namespace PridePerception.npcs {
             timeBeforeTargeting = 120.0f;
             flagType = -1;
 
-            for (int i = 0; i < flags.Count; i++) {
+            for (int i = 0; i < flags.Count; i++)
+            {
                 Flag _flag = flags[i];
                 MapMarkerUtil.Dispose(ec.map, _flag.mapMarker);
                 _flag.tweenOut();
@@ -143,7 +158,8 @@ namespace PridePerception.npcs {
             StopCoroutine(collectionPending);
         }
 
-        public void WinSequence() {
+        public void WinSequence()
+        {
             behaviorStateMachine.ChangeState(new BezzCheckState(this, new NavigationState_DoNothing(this, 62), true));
             CoreGameManager coregm = Singleton<CoreGameManager>.Instance;
             PlayerManager pm = coregm.GetPlayer(0);
@@ -153,12 +169,14 @@ namespace PridePerception.npcs {
             MusicManager musicManager = Singleton<MusicManager>.Instance;
             MidiFilePlayer midiFilePlayer = (MidiFilePlayer)ReflectionHelpers.ReflectionGetVariable(musicManager, "midiPlayer");
 
-            if (midiFilePlayer.MPTK_MidiName.Contains("FlagCatch")) {
+            if (midiFilePlayer.MPTK_MidiName.Contains("FlagCatch"))
+            {
                 musicManager.StopMidi();
                 musicManager.PlayMidi(Plugin.assets.Get<string>("Midis/npcs/Bezz/FlagCatchEnd0"), false);
             }
 
-            if (spawnItem) {
+            if (spawnItem)
+            {
                 ItemMetaStorage itemMetaStorage = ItemMetaStorage.Instance;
                 List<WeightedItemObject> foodItems =
                 [
@@ -173,31 +191,37 @@ namespace PridePerception.npcs {
             }
         }
 
-        public void LossSequence() {
+        public void LossSequence()
+        {
             behaviorStateMachine.ChangeState(new BezzCheckState(this, new NavigationState_DoNothing(this, 62), false));
             Singleton<CoreGameManager>.Instance.AddPoints(-100, 0, true);
             MusicManager musicManager = Singleton<MusicManager>.Instance;
             MidiFilePlayer midiFilePlayer = (MidiFilePlayer)ReflectionHelpers.ReflectionGetVariable(musicManager, "midiPlayer");
 
-            if (midiFilePlayer.MPTK_MidiName.Contains("FlagCatch")) {
+            if (midiFilePlayer.MPTK_MidiName.Contains("FlagCatch"))
+            {
                 musicManager.StopMidi();
                 musicManager.PlayMidi(Plugin.assets.Get<string>("Midis/npcs/Bezz/FlagCatchEnd1"), false);
             }
         }
     }
 
-    public class BezzBaseState(Bezz _bezz, NavigationState _navigationState) : NpcState(_bezz) {
+    public class BezzBaseState(Bezz _bezz, NavigationState _navigationState) : NpcState(_bezz)
+    {
         public Bezz bezz = _bezz;
         public NavigationState navigationState = _navigationState;
 
-        public override void Enter() {
+        public override void Enter()
+        {
             base.Enter();
             ChangeNavigationState(navigationState);
         }
     }
 
-    public class BezzWanderState(Bezz _bezz, NavigationState _navigationState) : BezzBaseState(_bezz, _navigationState) {
-        public override void Enter() {
+    public class BezzWanderState(Bezz _bezz, NavigationState _navigationState) : BezzBaseState(_bezz, _navigationState)
+    {
+        public override void Enter()
+        {
             base.Enter();
             bezz.Navigator.SetSpeed(22.5f);
             bezz.Navigator.maxSpeed = 22.5f;
@@ -206,28 +230,33 @@ namespace PridePerception.npcs {
             bezz.animator.SetDefaultAnimation("walk", 1.0f);
         }
 
-        public override void Update() {
+        public override void Update()
+        {
             base.Update();
             if (bezz.timeBeforeTargeting > 0.0f)
                 bezz.timeBeforeTargeting -= Time.deltaTime * bezz.TimeScale;
         }
 
-        public override void PlayerInSight(PlayerManager pm) {
+        public override void PlayerInSight(PlayerManager pm)
+        {
             base.PlayerInSight(pm);
             if (bezz.timeBeforeTargeting <= 0.0f && !pm.Tagged)
                 bezz.behaviorStateMachine.ChangeState(new BezzTargetState(bezz, new NavigationState_TargetPlayer(bezz, 62, pm.transform.position, true), pm));
         }
 
-        public override void Exit() {
+        public override void Exit()
+        {
             base.Exit();
             bezz.animator.ChangeSpeed(1.0f);
         }
     }
 
-    public class BezzTargetState(Bezz _bezz, NavigationState _navigationState, PlayerManager _pm) : BezzBaseState(_bezz, _navigationState) {
+    public class BezzTargetState(Bezz _bezz, NavigationState _navigationState, PlayerManager _pm) : BezzBaseState(_bezz, _navigationState)
+    {
         public PlayerManager pm = _pm;
 
-        public override void Enter() {
+        public override void Enter()
+        {
             base.Enter();
             bezz.Navigator.SetSpeed(30.0f);
             bezz.Navigator.maxSpeed = 30.0f;
@@ -239,45 +268,65 @@ namespace PridePerception.npcs {
             bezz.animator.SetDefaultAnimation("walk", 1.325f);
         }
 
-        public override void PlayerSighted(PlayerManager _pm) {
+        public override void PlayerSighted(PlayerManager _pm)
+        {
             base.PlayerSighted(pm);
-            if (!_pm.tagged) {
+            if (!_pm.tagged)
+            {
                 bezz.audio.FlushQueue(true);
                 bezz.audio.QueueAudio(Plugin.assets.Get<SoundObject>("Sounds/npcs/Bezz/bezzTarget0"));
                 bezz.audio.QueueAudio(Plugin.assets.Get<SoundObject>("Sounds/npcs/Bezz/bezzTarget1"));
             }
         }
 
-        public override void PlayerInSight(PlayerManager _pm) {
+        public override void PlayerInSight(PlayerManager _pm)
+        {
             base.PlayerInSight(_pm);
             if (!_pm.Tagged)
                 currentNavigationState.UpdatePosition(_pm.transform.position);
         }
 
-        public override void DestinationEmpty() {
+        public override void DestinationEmpty()
+        {
             base.DestinationEmpty();
             bezz.behaviorStateMachine.ChangeState(new BezzWanderState(bezz, new NavigationState_WanderRandom(bezz, 62)));
         }
 
-        public override void OnStateTriggerStay(Collider other, bool validCollision) {
-            base.OnStateTriggerStay(other, validCollision);
-            if (other.CompareTag("Player")) {
+        public override void OnStateTriggerStay(Entity otherEntity, Collider other, bool validCollision)
+        {
+            base.OnStateTriggerStay(otherEntity, other, validCollision);
+
+            if (!validCollision) return;
+
+            if (other.CompareTag("Player"))
+            {
                 PlayerManager _pm = other.GetComponent<PlayerManager>();
                 if (!_pm.Tagged)
-                    bezz.behaviorStateMachine.ChangeState(new BezzPromptState(bezz, new NavigationState_DoNothing(bezz, 62, true), _pm));
+                {
+                    bezz.behaviorStateMachine.ChangeState(
+                        new BezzPromptState(
+                            bezz,
+                            new NavigationState_DoNothing(bezz, 62, true),
+                            _pm
+                        )
+                    );
+                }
             }
         }
 
-        public override void Exit() {
+        public override void Exit()
+        {
             base.Exit();
             bezz.animator.ChangeSpeed(1.0f);
         }
     }
 
-    public class BezzPromptState(Bezz _bezz, NavigationState _navigationState, PlayerManager _pm) : BezzBaseState(_bezz, _navigationState) {
+    public class BezzPromptState(Bezz _bezz, NavigationState _navigationState, PlayerManager _pm) : BezzBaseState(_bezz, _navigationState)
+    {
         public PlayerManager pm = _pm;
 
-        public override void Enter() {
+        public override void Enter()
+        {
             base.Enter();
             bezz.Navigator.SetSpeed(22.5f);
             bezz.Navigator.maxSpeed = 22.5f;
@@ -294,7 +343,8 @@ namespace PridePerception.npcs {
             CoreGameManager coregm = Singleton<CoreGameManager>.Instance;
             int multiplier = Math.Max(coregm.sceneObject.levelNo, 0) + 1;
 
-            for (int i = 0; i < 15.0f * multiplier; i++) {
+            for (int i = 0; i < 15.0f * multiplier; i++)
+            {
                 if (cells.Count <= multiplier) break;
                 Cell cell = cells[UnityEngine.Random.Range(0, cells.Count)];
                 cells.Remove(cell);
@@ -304,7 +354,8 @@ namespace PridePerception.npcs {
                 Flag flag = bezz.LoadFlag(cell, flagType);
             }
 
-            for (int i = 0; i < multiplier; i++) {
+            for (int i = 0; i < multiplier; i++)
+            {
                 if (cells.Count == 0.0) break;
                 Cell cell = cells[UnityEngine.Random.Range(0, cells.Count)];
                 cells.Remove(cell);
@@ -319,38 +370,45 @@ namespace PridePerception.npcs {
             bezz.StartCoroutine(bezz.collectionPending);
         }
 
-        public override void Update() {
+        public override void Update()
+        {
             base.Update();
-            if (!bezz.audio.AnyAudioIsPlaying && bezz.animator.AnimationId == "happyTalk") {
+            if (!bezz.audio.AnyAudioIsPlaying && bezz.animator.AnimationId == "happyTalk")
+            {
                 bezz.animator.ChangeSpeed(1.0f);
                 bezz.animator.Play("idle", 1.0f);
                 bezz.animator.SetDefaultAnimation("idle", 1.0f);
             }
         }
 
-        public override void Exit() {
+        public override void Exit()
+        {
             base.Exit();
             bezz.audio.FlushQueue(true);
             bezz.animator.ChangeSpeed(1.0f);
         }
     }
 
-    public class BezzCheckState(Bezz _bezz, NavigationState _navigationState, bool _win) : BezzBaseState(_bezz, _navigationState) {
+    public class BezzCheckState(Bezz _bezz, NavigationState _navigationState, bool _win) : BezzBaseState(_bezz, _navigationState)
+    {
         public bool win = _win;
 
-        public override void Enter() {
+        public override void Enter()
+        {
             base.Enter();
             bezz.Navigator.SetSpeed(22.5f);
             bezz.Navigator.maxSpeed = 22.5f;
             bezz.audio.FlushQueue(true);
-            if (win) {
+            if (win)
+            {
                 bezz.audio.QueueAudio(Plugin.assets.Get<SoundObject>("Sounds/npcs/Bezz/bezzActivityWin0"));
                 CoreGameManager coregm = Singleton<CoreGameManager>.Instance;
                 PlayerManager pm = coregm.GetPlayer(0);
                 bool spawnItem = pm.itm.Has(Items.None);
                 bezz.audio.QueueAudio(Plugin.assets.Get<SoundObject>("Sounds/npcs/Bezz/bezzActivityWin1" + (spawnItem ? "" : "Alt")));
             }
-            else {
+            else
+            {
                 bezz.audio.QueueAudio(Plugin.assets.Get<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss0"));
                 bezz.audio.QueueAudio(Plugin.assets.Get<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss1"));
                 bezz.audio.QueueAudio(Plugin.assets.Get<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss2"));
@@ -362,14 +420,16 @@ namespace PridePerception.npcs {
             bezz.animator.SetDefaultAnimation(animatorPrefix + "Talk", 1.0f);
         }
 
-        public override void Update() {
+        public override void Update()
+        {
             base.Update();
             if (!bezz.audio.AnyAudioIsPlaying)
                 bezz.behaviorStateMachine.ChangeState(new BezzWanderState(bezz, new NavigationState_WanderRandom(bezz, 62)));
         }
     }
 
-    public class Flag : MonoBehaviour, IClickable<int> {
+    public class Flag : MonoBehaviour, IClickable<int>
+    {
         public Bezz bezz;
         public Cell cell;
         public int flagType;
@@ -378,7 +438,8 @@ namespace PridePerception.npcs {
         public IEnumerator tween;
         public Action onTweenFinished;
 
-        public Flag Initialize(Bezz _bezz, Cell _cell, int _flagType) {
+        public Flag Initialize(Bezz _bezz, Cell _cell, int _flagType)
+        {
             bezz = _bezz;
             cell = _cell;
             flagType = _flagType;
@@ -413,12 +474,14 @@ namespace PridePerception.npcs {
             return this;
         }
 
-        public void Update() {
+        public void Update()
+        {
             if (mapMarker != null)
                 mapMarker.ShowMarker(Singleton<CoreGameManager>.Instance.GetCamera(0).QuickMapAvailable);
         }
 
-        public void Clicked(int pm) {
+        public void Clicked(int pm)
+        {
             if (tween == null)
                 bezz.CheckFlag(this);
         }
@@ -428,8 +491,10 @@ namespace PridePerception.npcs {
         public bool ClickableHidden() => tween != null;
         public bool ClickableRequiresNormalHeight() => false;
 
-        public void resetTweenCoroutine() {
-            if (tween != null) {
+        public void resetTweenCoroutine()
+        {
+            if (tween != null)
+            {
                 StopCoroutine(tween);
                 tween = null;
             }
@@ -438,24 +503,29 @@ namespace PridePerception.npcs {
             StartCoroutine(tween);
         }
 
-        public IEnumerator startTween() {
-            while (Vector3.Distance(renderer.transform.localPosition, gameObject.transform.localPosition) != 0.0f) {
+        public IEnumerator startTween()
+        {
+            while (Vector3.Distance(renderer.transform.localPosition, gameObject.transform.localPosition) != 0.0f)
+            {
                 renderer.transform.localPosition = Vector3.MoveTowards(renderer.transform.localPosition, gameObject.transform.localPosition, 10.0f * Time.deltaTime);
                 yield return null;
             }
             tween = null;
-            if (onTweenFinished != null) {
+            if (onTweenFinished != null)
+            {
                 onTweenFinished.Invoke();
                 onTweenFinished = null;
             }
         }
 
-        public void tweenIn() {
+        public void tweenIn()
+        {
             gameObject.transform.localPosition += Vector3.up * 3.85f;
             resetTweenCoroutine();
         }
 
-        public void tweenOut() {
+        public void tweenOut()
+        {
             transform.localPosition += Vector3.down * 7.85f;
             resetTweenCoroutine();
             onTweenFinished = () => bezz.DisposeFlag(this);
