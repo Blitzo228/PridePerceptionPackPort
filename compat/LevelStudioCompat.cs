@@ -1,11 +1,11 @@
-﻿using MTM101BaldAPI.AssetTools;
-using MTM101BaldAPI.UI;
+﻿using MTM101BaldAPI;
+using MTM101BaldAPI.AssetTools;
+using MTM101BaldAPI.ObjectCreation;
 using PlusLevelStudio;
 using PlusLevelStudio.Editor.Tools;
 using PlusStudioLevelLoader;
 using PridePerception.core;
 using PridePerception.util;
-using TMPro;
 using UnityEngine;
 
 namespace PridePerception.compat
@@ -14,70 +14,61 @@ namespace PridePerception.compat
     {
         public static void Register()
         {
-            NPC bezzPrefab = Plugin.assets.Get<NPC>("npcs/Bezz");
-            EditorInterface.AddNPCVisual("Bezz", bezzPrefab);
+            if (!LevelStudioPlugin.Instance) return;
 
-            if (LevelLoaderPlugin.Instance != null && !LevelLoaderPlugin.Instance.npcAliases.ContainsKey("Bezz"))
+            var assets = Plugin.assets;
+            if (assets == null) return;
+
+            var bezz = assets.Get<NPC>("npcs/Bezz");
+            if (bezz == null) return;
+
+            var posterBezzTex = assets.Get<Texture2D>("Images/PosterObject/bezzPriPoster");
+            if (posterBezzTex != null)
             {
-                LevelLoaderPlugin.Instance.npcAliases.Add("Bezz", bezzPrefab);
+                var posterBezz = ObjectCreators.CreatePosterObject(posterBezzTex, new PosterTextData[0]);
+                posterBezz.name = "bezz_rule";
+                LevelLoaderPlugin.Instance.posterAliases["bezz_rule"] = posterBezz;
             }
 
-            PosterObject BezzPoster = ScriptableObject.CreateInstance<PosterObject>();
-            BezzPoster.name = "bezzPriPoster";
-            BezzPoster.baseTexture = AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzPriPoster.png"));
-
-            BezzPoster.textData = new PosterTextData[] {
-                new PosterTextData() {
-                    textKey = "bezzPriPosterDesc",
-                    position = new IntVector2(144, 98),
-                    size = new IntVector2(96, 128),
-                    fontSize = 12,
-                    font = BaldiFonts.ComicSans12.FontAsset(),
-                    color = Color.black,
-                    alignment = TextAlignmentOptions.Center,
-                    style = FontStyles.Normal
-                },
-                new PosterTextData() {
-                    textKey = "bezzPriPosterTitle",
-                    position = new IntVector2(48, 48),
-                    size = new IntVector2(160, 32),
-                    fontSize = 18,
-                    font = BaldiFonts.ComicSans18.FontAsset(),
-                    color = Color.black,
-                    alignment = TextAlignmentOptions.Center,
-                    style = FontStyles.Bold
-                }
-            };
-
-            if (LevelLoaderPlugin.Instance != null && !LevelLoaderPlugin.Instance.posterAliases.ContainsKey("bezz_rule"))
+            var poster0Tex = assets.Get<Texture2D>("Images/PosterObject/poster0");
+            if (poster0Tex != null)
             {
-                LevelLoaderPlugin.Instance.posterAliases.Add("bezz_rule", BezzPoster);
+                var poster0 = ObjectCreators.CreatePosterObject(poster0Tex, new PosterTextData[0]);
+                poster0.name = "poster0";
+                LevelLoaderPlugin.Instance.posterAliases["poster0"] = poster0;
             }
 
-            EditorInterfaceModes.AddModeCallback((mode, isVanilla) => {
-                Texture2D iconTex = AssetLoader.TextureFromFile(ModPaths.GetPath("compat/LevelStudioCompat/npc_bezz.png"));
-                Sprite icon = AssetLoader.SpriteFromTexture2D(iconTex, 100f);
-                EditorInterfaceModes.AddToolToCategory(mode, "npcs", new BezzTool(icon));
+            LevelLoaderPlugin.Instance.npcAliases["Bezz"] = bezz;
+            EditorInterface.AddNPCVisual("Bezz", bezz);
 
-                if (mode.availableTools.ContainsKey("posters"))
+            var slotSprite = assets.Get<Sprite>("Images/PrideSlotIndividual");
+            if (slotSprite == null)
+                slotSprite = bezz.spriteRenderer[0].sprite;
+
+            var npcIcon = assets.Get<Sprite>("Images/compat/LevelStudioCompat/npc_bezz");
+            if (npcIcon == null)
+                npcIcon = bezz.spriteRenderer[0].sprite;
+
+            EditorInterfaceModes.AddModeCallback((mode, vanilla) =>
+            {
+                var npcTool = new NPCTool("Bezz", npcIcon);
+                npcTool.frameOverride = slotSprite;
+                EditorInterfaceModes.AddToolToCategory(mode, "npcs", npcTool, false);
+
+                if (LevelLoaderPlugin.Instance.posterAliases.ContainsKey("bezz_rule"))
                 {
-                    EditorInterfaceModes.AddToolToCategory(mode, "posters", new BezzPosterTool());
+                    var posterToolBezz = new PosterTool("bezz_rule");
+                    posterToolBezz.frameOverride = slotSprite;
+                    EditorInterfaceModes.AddToolToCategory(mode, "posters", posterToolBezz, false);
+                }
+
+                if (LevelLoaderPlugin.Instance.posterAliases.ContainsKey("poster0"))
+                {
+                    var posterTool0 = new PosterTool("poster0");
+                    posterTool0.frameOverride = slotSprite;
+                    EditorInterfaceModes.AddToolToCategory(mode, "posters", posterTool0, false);
                 }
             });
         }
-    }
-
-    public class BezzTool : NPCTool
-    {
-        public BezzTool(Sprite sprite) : base("Bezz", sprite) { }
-        public override string titleKey => "Ed_Tool_Npc_Bezz";
-        public override string descKey => "Ed_Tool_Npc_Bezz_Desc";
-    }
-
-    public class BezzPosterTool : PosterTool
-    {
-        public BezzPosterTool() : base("bezz_rule") { }
-        public override string titleKey => "Bezz's Office Poster";
-        public override string descKey => titleKey;
     }
 }

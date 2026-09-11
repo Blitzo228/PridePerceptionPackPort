@@ -47,14 +47,23 @@
         {
             "key": "bezzActivityLoss2",
             "value": "... Looks like I'll have to take THESE with me then..."
+        },        {
+            "key": "Ed_Poster_Title_bezz_rule",
+            "value": "Bezz's Poster"
         },
         {
-            "key": "Ed_Tool_Npc_Bezz",
-            "value": "Bezz"
+            "key": "Ed_Poster_Desc_bezz_rule",
+            "value": "A proud LGBTQ+ rights activist! Always keeps a ton of flags on them, but always seems to lose them..."
         },
         {
-            "key": "Ed_Tool_Npc_Bezz_Desc",
-            "value": "Asks the player to find a specific pride flag. Rewards items and YTPs, but subtracts points on failure."
+            "key": "Ed_Poster_Title_poster0",
+            "value": "Old Bezz vs New Bezz"
+        },
+        {
+            "key": "Ed_Poster_Desc_poster0",
+            "value": "Old Bezz vs New Bezz. Who is win?"
         }
+    ]
+}
     ]
 }

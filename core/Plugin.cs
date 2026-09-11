@@ -14,7 +14,7 @@ namespace PridePerception.core
 {
     [BepInDependency("mtm101.rulerp.bbplus.baldidevapi")]
     [BepInDependency("mtm101.rulerp.baldiplus.levelstudio", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInPlugin("blitzo.baldiplus.prideperception", "Pride Perception Pack", "1.3.0.1")]
+    [BepInPlugin("blitzo.baldiplus.prideperception", "Pride Perception Pack", "1.4.0.0")]
     public class Plugin : BaseUnityPlugin
     {
         public static Plugin current;
@@ -40,32 +40,32 @@ namespace PridePerception.core
         public void registerAssets()
         {
             assets.Add<Sprite>("Images/compat/LevelStudioCompat/npc_bezz",
-                AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("compat/LevelStudioCompat/npc_bezz.png")),
-                    10.0f));
+                AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("compat/LevelStudioCompat/npc_bezz.png")), 10.0f));
+
+            assets.Add<Sprite>("Images/PrideSlotIndividual",
+                AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("compat/LevelStudioCompat/PrideSlotIndividual.png")), 10.0f));
 
             assets.Add<Sprite>("Images/npcs/Bezz/bezzIdle",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzIdle.png")), 30.0f));
 
-            for (int i = 0; i < 12.0f; i++)
+            for (int i = 0; i < 12; i++)
                 assets.Add<Sprite>("Images/npcs/Bezz/bezzWalk" + i,
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzWalk" + i + ".png")), 30.0f));
 
-            for (int i = 0; i < 2.0f; i++)
+            for (int i = 0; i < 2; i++)
                 assets.Add<Sprite>("Images/npcs/Bezz/bezzHappyTalk" + i,
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzHappyTalk" + i + ".png")), 30.0f));
 
-            for (int i = 0; i < 2.0f; i++)
+            for (int i = 0; i < 2; i++)
                 assets.Add<Sprite>("Images/npcs/Bezz/bezzUpsetTalk" + i,
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzUpsetTalk" + i + ".png")), 30.0f));
 
-            for (int i = 0; i < 5.0f; i++)
+            for (int i = 0; i < 5; i++)
             {
                 assets.Add<Sprite>("Images/npcs/Bezz/Flag/" + i + "0",
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/" + i + "0.png")), 30.0f));
-
                 assets.Add<Sprite>("Images/npcs/Bezz/Flag/" + i + "1",
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/" + i + "1.png")), 30.0f));
-
                 assets.Add<Sprite>("Images/npcs/Bezz/Flag/3dflag" + i,
                     AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/3dflag" + i + ".png")), 10.0f));
             }
@@ -74,6 +74,7 @@ namespace PridePerception.core
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/mapMarker.png")), 15.0f));
             assets.Add<Sprite>("Images/npcs/Bezz/Flag/mapIcon",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/Flag/mapIcon.png")), 16.0f));
+
             assets.Add<Sprite>("Images/patches/Minigame_CampfirePatches/3dflagpride",
                 AssetLoader.SpriteFromTexture2D(AssetLoader.TextureFromFile(ModPaths.GetPath("patches/Minigame_CampfirePatches/3dflagpride.png")), 10.0f));
 
@@ -86,26 +87,33 @@ namespace PridePerception.core
             assets.Add<Texture2D>("Images/PosterObject/poster0",
                 AssetLoader.TextureFromFile(ModPaths.GetPath("PosterObject/poster0.png")));
 
+            assets.Add<Texture2D>("Images/PosterObject/bezzPriPoster",
+                AssetLoader.TextureFromFile(ModPaths.GetPath("npcs/Bezz/bezzPriPoster.png")));
+
             AssetLoader.LocalizationFromMod(this);
+
             assets.Add<string>("Midis/npcs/Bezz/FlagCatch0", AssetLoader.MidiFromMod("Midis/npcs/Bezz/FlagCatch0", this, "Midis", "npcs", "Bezz", "FlagCatch0.mid"));
             assets.Add<string>("Midis/npcs/Bezz/FlagCatch1", AssetLoader.MidiFromMod("Midis/npcs/Bezz/FlagCatch1", this, "Midis", "npcs", "Bezz", "FlagCatch1.mid"));
             assets.Add<string>("Midis/npcs/Bezz/FlagCatchEnd0", AssetLoader.MidiFromMod("Midis/npcs/Bezz/FlagCatchEnd0", this, "Midis", "npcs", "Bezz", "FlagCatchEnd0.mid"));
             assets.Add<string>("Midis/npcs/Bezz/FlagCatchEnd1", AssetLoader.MidiFromMod("Midis/npcs/Bezz/FlagCatchEnd1", this, "Midis", "npcs", "Bezz", "FlagCatchEnd1.mid"));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzTarget0", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzTarget0.wav"), "bezzTarget0", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzTarget1", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzTarget1.wav"), "bezzTarget1", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzPrompt0", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzPrompt0.wav"), "bezzPrompt0", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzPrompt1", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzPrompt1.wav"), "bezzPrompt1", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityWin0", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityWin0.wav"), "bezzActivityWin0", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityWin1", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityWin1.wav"), "bezzActivityWin1", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityWin1Alt", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityWin1Alt.wav"), "bezzActivityWin1Alt", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss0", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityLoss0.wav"), "bezzActivityLoss0", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss1", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityLoss1.wav"), "bezzActivityLoss1", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
-            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss2", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityLoss2.wav"), "bezzActivityLoss2", SoundType.Voice, new Color(1.0f, 0.5f, 0.0f)));
+
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzTarget0", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzTarget0.wav"), "bezzTarget0", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzTarget1", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzTarget1.wav"), "bezzTarget1", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzPrompt0", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzPrompt0.wav"), "bezzPrompt0", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzPrompt1", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzPrompt1.wav"), "bezzPrompt1", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityWin0", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityWin0.wav"), "bezzActivityWin0", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityWin1", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityWin1.wav"), "bezzActivityWin1", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityWin1Alt", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityWin1Alt.wav"), "bezzActivityWin1Alt", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss0", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityLoss0.wav"), "bezzActivityLoss0", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss1", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityLoss1.wav"), "bezzActivityLoss1", SoundType.Voice, new Color(1f, 0.5f, 0f)));
+            assets.Add<SoundObject>("Sounds/npcs/Bezz/bezzActivityLoss2", ObjectCreators.CreateSoundObject(AssetLoader.AudioClipFromMod(this, "Sounds", "npcs", "Bezz", "bezzActivityLoss2.wav"), "bezzActivityLoss2", SoundType.Voice, new Color(1f, 0.5f, 0f)));
         }
 
         public void updateAssets()
         {
-            AssetLoader.ReplaceTexture("CampfireFrenzy_TutPic_04", AssetLoader.AttemptConvertTo(assets.Get<Texture2D>("Images/patches/Minigame_CampfirePatches/CampfireFrenzy_TutPic_04Replacement"), TextureFormat.RGB24));
+            var tex = assets.Get<Texture2D>("Images/patches/Minigame_CampfirePatches/CampfireFrenzy_TutPic_04Replacement");
+            if (tex != null)
+                AssetLoader.ReplaceTexture("CampfireFrenzy_TutPic_04", AssetLoader.AttemptConvertTo(tex, TextureFormat.RGB24));
         }
 
         public void registerNPCs()
@@ -126,7 +134,10 @@ namespace PridePerception.core
         public void registerCompatibilities()
         {
             if (Chainloader.PluginInfos.ContainsKey("mtm101.rulerp.baldiplus.levelstudio"))
-                LevelStudioSupport.Register();
+            {
+                try { LevelStudioSupport.Register(); }
+                catch { }
+            }
         }
 
         public void sceneGenerated(string sceneTitle, int sceneIndex, SceneObject sceneObject)
@@ -139,13 +150,15 @@ namespace PridePerception.core
                     continue;
 
                 CustomLevelObject levelObject = levelObjects[i];
-                if (sceneIndex > 0.0)
+                if (sceneIndex > 0)
                 {
                     int weight = 100 + (sceneIndex + 1) * 10;
                     sceneObject.potentialNPCs.Add(new() { selection = assets.Get<NPC>("npcs/Bezz"), weight = weight });
                 }
 
-                levelObject.posters = levelObject.posters.AddToArray<WeightedPosterObject>(new() { selection = ObjectCreators.CreatePosterObject(assets.Get<Texture2D>("Images/PosterObject/poster0"), []), weight = 25 });
+                var poster0 = assets.Get<Texture2D>("Images/PosterObject/poster0");
+                if (poster0 != null)
+                    levelObject.posters = levelObject.posters.AddToArray(new WeightedPosterObject() { selection = ObjectCreators.CreatePosterObject(poster0, new PosterTextData[0]), weight = 25 });
             }
         }
     }
