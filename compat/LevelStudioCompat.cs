@@ -1,11 +1,9 @@
 ﻿using MTM101BaldAPI;
-using MTM101BaldAPI.AssetTools;
 using MTM101BaldAPI.ObjectCreation;
 using PlusLevelStudio;
 using PlusLevelStudio.Editor.Tools;
 using PlusStudioLevelLoader;
 using PridePerception.core;
-using PridePerception.util;
 using UnityEngine;
 
 namespace PridePerception.compat
@@ -15,22 +13,20 @@ namespace PridePerception.compat
         public static void Register()
         {
             if (!LevelStudioPlugin.Instance) return;
+            if (Plugin.assets == null) return;
 
-            var assets = Plugin.assets;
-            if (assets == null) return;
-
-            var bezz = assets.Get<NPC>("npcs/Bezz");
+            NPC bezz = null;
+            try { bezz = Plugin.assets.Get<NPC>("npcs/Bezz"); } catch { }
             if (bezz == null) return;
 
-            var posterBezzTex = assets.Get<Texture2D>("Images/PosterObject/bezzPriPoster");
-            if (posterBezzTex != null)
+            if (bezz.Poster != null)
             {
-                var posterBezz = ObjectCreators.CreatePosterObject(posterBezzTex, new PosterTextData[0]);
-                posterBezz.name = "bezz_rule";
-                LevelLoaderPlugin.Instance.posterAliases["bezz_rule"] = posterBezz;
+                bezz.Poster.name = "bezz_rule";
+                LevelLoaderPlugin.Instance.posterAliases["bezz_rule"] = bezz.Poster;
             }
 
-            var poster0Tex = assets.Get<Texture2D>("Images/PosterObject/poster0");
+            Texture2D poster0Tex = null;
+            try { poster0Tex = Plugin.assets.Get<Texture2D>("Images/PosterObject/poster0"); } catch { }
             if (poster0Tex != null)
             {
                 var poster0 = ObjectCreators.CreatePosterObject(poster0Tex, new PosterTextData[0]);
@@ -41,32 +37,32 @@ namespace PridePerception.compat
             LevelLoaderPlugin.Instance.npcAliases["Bezz"] = bezz;
             EditorInterface.AddNPCVisual("Bezz", bezz);
 
-            var slotSprite = assets.Get<Sprite>("Images/PrideSlotIndividual");
-            if (slotSprite == null)
-                slotSprite = bezz.spriteRenderer[0].sprite;
+            Sprite slotSprite = null;
+            try { slotSprite = Plugin.assets.Get<Sprite>("Images/PrideSlotIndividual"); } catch { }
 
-            var npcIcon = assets.Get<Sprite>("Images/compat/LevelStudioCompat/npc_bezz");
-            if (npcIcon == null)
+            Sprite npcIcon = null;
+            try { npcIcon = Plugin.assets.Get<Sprite>("Images/compat/LevelStudioCompat/npc_bezz"); } catch { }
+            if (npcIcon == null && bezz.spriteRenderer.Length > 0)
                 npcIcon = bezz.spriteRenderer[0].sprite;
 
             EditorInterfaceModes.AddModeCallback((mode, vanilla) =>
             {
                 var npcTool = new NPCTool("Bezz", npcIcon);
-                npcTool.frameOverride = slotSprite;
+                if (slotSprite != null) npcTool.frameOverride = slotSprite;
                 EditorInterfaceModes.AddToolToCategory(mode, "npcs", npcTool, false);
 
                 if (LevelLoaderPlugin.Instance.posterAliases.ContainsKey("bezz_rule"))
                 {
-                    var posterToolBezz = new PosterTool("bezz_rule");
-                    posterToolBezz.frameOverride = slotSprite;
-                    EditorInterfaceModes.AddToolToCategory(mode, "posters", posterToolBezz, false);
+                    var tool = new PosterTool("bezz_rule");
+                    if (slotSprite != null) tool.frameOverride = slotSprite;
+                    EditorInterfaceModes.AddToolToCategory(mode, "posters", tool, false);
                 }
 
                 if (LevelLoaderPlugin.Instance.posterAliases.ContainsKey("poster0"))
                 {
-                    var posterTool0 = new PosterTool("poster0");
-                    posterTool0.frameOverride = slotSprite;
-                    EditorInterfaceModes.AddToolToCategory(mode, "posters", posterTool0, false);
+                    var tool = new PosterTool("poster0");
+                    if (slotSprite != null) tool.frameOverride = slotSprite;
+                    EditorInterfaceModes.AddToolToCategory(mode, "posters", tool, false);
                 }
             });
         }
