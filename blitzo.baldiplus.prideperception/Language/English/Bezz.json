@@ -49,11 +49,11 @@
             "value": "... Looks like I'll have to take THESE with me then..."
         },        {
             "key": "Ed_Poster_Title_bezz_rule",
-            "value": "Bezz's Poster"
+            "value": "Bezz's Office Poster"
         },
         {
             "key": "Ed_Poster_Desc_bezz_rule",
-            "value": "A proud LGBTQ+ rights activist! Always keeps a ton of flags on them, but always seems to lose them..."
+            "value": "Bezz's poster in office."
         },
         {
             "key": "Ed_Poster_Title_poster0",
@@ -63,7 +63,5 @@
             "key": "Ed_Poster_Desc_poster0",
             "value": "Old Bezz vs New Bezz. Who is win?"
         }
-    ]
-}
     ]
 }

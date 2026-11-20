@@ -486,8 +486,9 @@ namespace PridePerception.npcs
                 bezz.CheckFlag(this);
         }
 
-        public void ClickableSighted(int pm) { }
-        public void ClickableUnsighted(int pm) { }
+        public void ClickableSighted(int player) { }
+        public void ClickableInSight(int player) { }
+        public void ClickableUnsighted(int player) { }
         public bool ClickableHidden() => tween != null;
         public bool ClickableRequiresNormalHeight() => false;
 

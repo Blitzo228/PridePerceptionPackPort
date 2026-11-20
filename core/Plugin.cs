@@ -17,7 +17,7 @@ namespace PridePerception.core
     [BepInDependency("mtm101.rulerp.bbplus.baldidevapi")]
     [BepInDependency("mtm101.rulerp.baldiplus.levelstudio", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("alexbw145.baldiplus.pinedebug", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInPlugin("blitzo.baldiplus.prideperception", "Pride Perception Pack", "1.3.0.1")]
+    [BepInPlugin("blitzo.baldiplus.prideperception", "Pride Perception Pack", "1.3.0.2")]
     public class Plugin : BaseUnityPlugin
     {
         public static Plugin current;
